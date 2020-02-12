@@ -18,7 +18,7 @@ spec:
     namespace: echo-prod
     image:
       repository: us.gcr.io/coastal-range-267909/echo
-      tag: 0.1.40
+      tag: 0.1.42
     replicaCount: 2
 
   #The following configurations are made according to the echo application. If editing the mongo application environment variables settings - make sure to update them here too! 
@@ -35,6 +35,6 @@ spec:
   #Format - mongodb://<username>:<password>@<mongodb-pod-name>.<mongodb-namespace>:<port>/<table-name>    - while the chart being parsed - this value will be automatically encoded to base64 . 
 
   #Ingress
-  ingress: 
+  ingress:
     host: echoapp.chickenkiller.com
     path: /

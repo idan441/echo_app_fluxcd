@@ -1,0 +1,34 @@
+#####################################################################
+### Ingress resource - which configures the nginx-ingress service ###
+#####################################################################
+
+#This file will create an ingress resource for the echo project. 
+#Eventually all ingress resources will configure the nginx-ingress server defined in the k8s cluster. This will make the website accessable to the web. 
+
+---
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  annotations:
+    kubernetes.io/ingress.class: nginx
+    cert-manager.io/cluster-issuer: "letsencrypt-prod" #This is the name of the isuuer resource defined at ./issuer/acme.yaml
+  name: echoconf 
+  namespace: nginx-ingress
+spec:
+  rules:
+    - host: {{ .Value.ingress.host }} # The production environment. 
+      http:
+        paths:
+          - backend:
+              serviceName: echo-prod 
+              servicePort: {{ .Values.ports.port }}
+            path: {{ .Values.ingress.path }} #That means that the application will be shown on the echoapp.chickenkiller.com ! 
+  # This section is only required if TLS is to be enabled for the Ingress
+    #Since I am using ACME and cert-manager to make an SSL/TLS connection - I did put this section. 
+    #For further information please look at the file ./issuer/acme.yaml and my notes at ./helm notes-ingress server file. 
+  tls:
+      - hosts:
+          - {{ .Value.ingress.host }} 
+        secretName: tls-key #This secret key is defined automatically - AND IT IS NOT THE SECRET KEY DEFINED AT THE ISSUER SERVICE - SO DON'T GIVE THEM THE SAME NAME! 
+
+

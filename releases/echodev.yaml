@@ -36,7 +36,7 @@ spec:
 
   #Ingress
   ingress: 
-    host: echoapp.chickenkiller.com
-    path: /dev
+    host: echoappdev.chickenkiller.com
+    path: /
 
 

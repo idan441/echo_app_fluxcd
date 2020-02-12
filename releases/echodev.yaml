@@ -26,7 +26,7 @@ spec:
   ###ConfigMap - here put the echo application environment variables. 
   data: 
     port: "3000" #The port the application is running on. 
-    loglevel: info 
+    loglevel: debug 
     persist: "false" #Whether to use or not to use a mongo database. 
 
   #Secret - here is the database login address. 

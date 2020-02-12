@@ -12,8 +12,8 @@ namespace: echo-prod #The namespace which the object will be created at.
 
 #Deployment
 image:
-  repository: us.gcr.io/ancient-edition-267617/echo #The echo application image, in this case in the google cloud. 
-  tag: 0.1.1
+  repository: us.gcr.io/coastal-range-267909/echo #The echo application image, in this case in the google cloud. 
+  tag: 0.1.38
 
 #Deployment
 replicas: 2
@@ -25,7 +25,7 @@ ports:
 data: 
   port: "3000"
   loglevel: info
-  persist: "true"
+  persist: "false"
 
 #Secret
 secret:

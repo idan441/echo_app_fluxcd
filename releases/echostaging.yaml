@@ -27,7 +27,7 @@ spec:
   data: 
     port: "3000" #The port the application is running on. 
     loglevel: info 
-    persist: "false" #Whether to use or not to use a mongo database. 
+    persist: "true" #Whether to use or not to use a mongo database. 
 
   #Secret - here is the database login address. 
   secret:

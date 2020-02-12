@@ -18,6 +18,7 @@ metadata:
   name: {{ .Values.name }} #The name of the deployment resource. 
   labels: #The labels will be used to locate the replicas created in the next scopes. 
     app: {{ .Values.name }} #When using a service resource to refer to the deploymnet reosucre by its label. ( https://kubernetes-on-aws.readthedocs.io/en/latest/user-guide/labels.html ) 
+  namespace: {{ .Values.namespace }} #The namespace which the object will be created at. 
 spec: #Spec = specification = details and characteristics of the new object. Here I will put definitions for the "deployment" resource. 
   replicas: {{ .Values.replicas }} #Make two pods of the echo application. 
   selector:

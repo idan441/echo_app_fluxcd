@@ -13,6 +13,7 @@ apiVersion: v1
 kind: ConfigMap
 metadata:
   name: {{ .Values.name }} #The name of the config map. In Kubernetes it will be shown as "ConfigMap/echo" - so no need to mention ConfigMap in the name! 
+  namespace: {{ .Values.namespace }} #The namespace which the object will be created at. 
 data: #The environment variables who will be set in pods/containers which will refer to the Config Map. 
   PORT: "{{ .Values.data.port }}"
   LOGLEVEL: "{{ .Values.data.loglevel }}"

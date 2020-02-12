@@ -20,6 +20,7 @@ apiVersion: v1
 kind: Service
 metadata:
   name: {{ .Values.name }} #When typing "kubectl get services" the output will be "service/echoapp" - so no need to write in here the words service, it will automatically be added! 
+  namespace: {{ .Values.namespace }} #The namespace which the object will be created at. 
 spec:
   type: ClusterIP #This will make a cluster with an IP address for the pods and the service - but will not expose it to the web. THis is a headless service - and this is what I want to refer to form the ingress server! ( The ingress server will be the one to be exposed ot the web. ) 
   ports:

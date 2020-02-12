@@ -28,7 +28,7 @@ spec:
     #For further information please look at the file ./issuer/acme.yaml and my notes at ./helm notes-ingress server file. 
   tls:
       - hosts: 
-          - {{ .Value.ingress.host }} 
+          - {{ .Values.ingress.host }} 
         secretName: tls-key #This secret key is defined automatically - AND IT IS NOT THE SECRET KEY DEFINED AT THE ISSUER SERVICE - SO DON'T GIVE THEM THE SAME NAME! 
 
 

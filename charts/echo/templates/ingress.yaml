@@ -16,7 +16,7 @@ metadata:
   namespace: {{ .Values.namespace }}
 spec:
   rules:
-    - host: {{ .Value.ingress.host }} # The production environment. 
+    - host: {{ .Values.ingress.host }} # The production environment. 
       http:
         paths:
           - backend:

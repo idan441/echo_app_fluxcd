@@ -17,8 +17,8 @@ spec:
     name: echoapp-prod
     namespace: echo-prod
     image:
-      repository: "us.gcr.io/coastal-range-267909/echo"
-      tag: "0.1.38"
+      repository: us.gcr.io/coastal-range-267909/echo
+      tag: 0.1.38
     replicaCount: 2
 
 

@@ -32,4 +32,4 @@ spec:
   #Secret - here is the database login address. 
   secret:
     mongodburl: mongodb://root:1234@mongodb.mongodb:27017/echo #Put the url in its original format, while parsing the value helm will automatically encode it using base64 . 
-
+  #Format - mongodb://<username>:<password>@<mongodb-pod-name>.<mongodb-namespace>:<port>/<table-name>    - while the chart being parsed - this value will be automatically encoded to base64 . 

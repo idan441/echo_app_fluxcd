@@ -17,8 +17,8 @@ spec:
     name: echoapp-dev
     namespace: echo-dev
     image:
-      repository: us.gcr.io/coastal-range-267909/echo
-      tag: dev_9e6a78f3be099058972a22b5b82288a0356bacb1
+      repository: "us.gcr.io/coastal-range-267909/echo"
+      tag: "dev_9e6a78f3be099058972a22b5b82288a0356bacb1"
     replicaCount: 2
 
 

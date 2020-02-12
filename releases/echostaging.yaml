@@ -17,8 +17,8 @@ spec:
     name: echoapp-staging
     namespace: echo-staging
     image:
-      repository: us.gcr.io/coastal-range-267909/echo
-      tag: staging_cc6544b081dd0ccc6925b9848258a6669d4a0de7 
+      repository: "us.gcr.io/coastal-range-267909/echo"
+      tag: "staging_cc6544b081dd0ccc6925b9848258a6669d4a0de7" 
     replicaCount: 2
 
 

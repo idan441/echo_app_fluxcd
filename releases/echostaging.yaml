@@ -18,15 +18,15 @@ spec:
     namespace: echo-staging
     image:
       repository: "us.gcr.io/coastal-range-267909/echo"
-      tag: "staging_cc6544b081dd0ccc6925b9848258a6669d4a0de7" 
+      tag: "staging_713bb7f3d4a6d019d65c8ca19bf4b62eebcbe5fb"
     replicaCount: 2
 
   #The following configurations are made according to the echo application. If editing the mongo application environment variables settings - make sure to update them here too! 
   #According to the costumer's demand - the staging envrionment should persist to a database named "staging" on the mongodb namespace! 
   ###ConfigMap - here put the echo application environment variables. 
-  data: 
+  data:
     port: "3000" #The port the application is running on. 
-    loglevel: info 
+    loglevel: info
     persist: "true" #Whether to use or not to use a mongo database. 
 
   #Secret - here is the database login address. 

@@ -18,15 +18,15 @@ spec:
     namespace: echo-dev
     image:
       repository: "us.gcr.io/coastal-range-267909/echo"
-      tag: "dev_9e6a78f3be099058972a22b5b82288a0356bacb1"
+      tag: "dev_decfeb72f0c3f9d3b3acc9b6657292694700fd5f"
     replicaCount: 2
 
   #The following configurations are made according to the echo application. If editing the mongo application environment variables settings - make sure to update them here too! 
   #According to the costumer's demand - the development envrionment should not persist to a database! 
   ###ConfigMap - here put the echo application environment variables. 
-  data: 
+  data:
     port: "3000" #The port the application is running on. 
-    loglevel: debug 
+    loglevel: debug
     persist: "false" #Whether to use or not to use a mongo database. 
 
   #Secret - here is the database login address. 

@@ -18,7 +18,7 @@ spec:
     namespace: echo-dev
     image:
       repository: "us.gcr.io/coastal-range-267909/echo"
-      tag: "dev_decfeb72f0c3f9d3b3acc9b6657292694700fd5f"
+      tag: "dev_34adcfab599fa328661f8451a4e8952c1b4a37e2"
     replicaCount: 2
 
   #The following configurations are made according to the echo application. If editing the mongo application environment variables settings - make sure to update them here too! 
